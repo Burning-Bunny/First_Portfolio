@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap");
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #040a2b;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.logo {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.logo img {
+  width: 100%;
+  display: block;
+}
+
+.id,
+.pw {
+  display: block;
+  width: 40%;
+  font-size: 25px;
+  color: white;
+  border: none;
+  border-bottom: 3px solid white;
+  margin: 20px auto;
+}
+.id::placeholder,
+.pw::placeholder {
+  color: white;
+}
+.pw {
+  margin-bottom: 50px;
+}
+.login_option {
+  width: 30%;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin: 20px auto;
+}
+
+.sns_login {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.sns_login li {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.sns_login li img {
+  width: 100%;
+}
+.auto_login_btn {
+  text-align: center;
+  width: 30%;
+  margin: 50px auto;
+}
+input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.auto_login {
+  color: white;
+}
+.btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn a {
+  width: 35%;
+  height: 50px;
+  text-align: center;
+  background-color: white;
+  color: #040a2b;
+  line-height: 50px;
+  border-radius: 10px;
+}
