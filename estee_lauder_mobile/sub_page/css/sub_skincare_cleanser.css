@@ -1,0 +1,455 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #040a2b;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* --------------------------header------------------------------------ */
+.header {
+  display: flex;
+}
+
+.header .gnb {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.ham_btn {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.login {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+  line-height: 20px;
+}
+
+.header .logo {
+  margin: 5px 10px;
+  flex: 1;
+  transition: all 0.5s;
+}
+
+.header .logo img {
+  width: 100%;
+  display: block;
+}
+.header .search {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  margin: 20px 10px;
+}
+.header .search_icon {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: #040a2b;
+  font-size: 15px;
+}
+.header .search input[type="search"] {
+  width: 80%;
+  padding: 5px 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #040a2b;
+}
+
+.falldown_menu {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  height: 0;
+  width: 80%;
+  transition: all 0.3s 0.2s;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #fff;
+}
+#falldown_menu_on,
+#falldown_menu_off {
+  display: none;
+}
+#falldown_menu_on:checked ~ .falldown_menu {
+  height: 200vh;
+}
+#falldown_menu_off:checked ~ .falldown_menu {
+  height: 0;
+}
+#falldown_menu_on:checked ~ .falldown_menu_close {
+  opacity: 1;
+}
+#falldown_menu_off:checked ~ .falldown_menu_close {
+  opacity: 0;
+}
+.falldown_menu_close {
+  position: fixed;
+  top: 55px;
+  left: 81%;
+  font-size: 30px;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s 0.2s;
+  z-index: 1;
+}
+.falldown_contents {
+  display: flex;
+  border-bottom: 1px dashed #707070;
+  padding: 5px;
+}
+.title {
+  width: 80px;
+  margin: 10px;
+  text-align: center;
+  color: #040a2b;
+  font-weight: bold;
+}
+.title_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.title_img img {
+  width: 100%;
+}
+.falldown_contents ul {
+  flex: 1;
+}
+/* .falldown_contents .skincare_menu,
+  .falldown_contents .makeup_menu,
+  .falldown_contents .fragrance,
+  .falldown_contents .collection,
+  .falldown_contents .re_nutriv,
+  .falldown_contents .aerin{
+  
+  } */
+
+.falldown_contents label {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.falldown_contents01,
+.falldown_contents02,
+.falldown_contents03,
+.falldown_contents04,
+.falldown_contents05,
+.falldown_contents06,
+.falldown_contents07,
+.falldown_contents08,
+.falldown_contents09,
+.falldown_contents10,
+.falldown_contents11,
+.falldown_contents12,
+.falldown_contents13 {
+  height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s 0.2s;
+}
+
+.falldown_contents01 li,
+.falldown_contents02 li,
+.falldown_contents03 li,
+.falldown_contents04 li,
+.falldown_contents05 li,
+.falldown_contents06 li,
+.falldown_contents07 li,
+.falldown_contents08 li,
+.falldown_contents09 li,
+.falldown_contents10 li,
+.falldown_contents11 li,
+.falldown_contents12 li,
+.falldown_contents13 li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #040a2b;
+  box-sizing: border-box;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.falldown_contents01 li a,
+.falldown_contents02 li a,
+.falldown_contents03 li a,
+.falldown_contents04 li a,
+.falldown_contents05 li a,
+.falldown_contents06 li a,
+.falldown_contents07 li a,
+.falldown_contents08 li a,
+.falldown_contents09 li a,
+.falldown_contents10 li a,
+.falldown_contents11 li a,
+.falldown_contents12 li a,
+.falldown_contents13 li a {
+  display: block;
+  width: 100%;
+}
+
+#falldown_contents01,
+#falldown_contents02,
+#falldown_contents03,
+#falldown_contents04,
+#falldown_contents05,
+#falldown_contents06,
+#falldown_contents07,
+#falldown_contents08,
+#falldown_contents09,
+#falldown_contents10,
+#falldown_contents11,
+#falldown_contents12,
+#falldown_contents13 {
+  display: none;
+}
+#falldown_contents01:checked ~ .falldown_contents01 {
+  height: 270px;
+}
+#falldown_contents02:checked ~ .falldown_contents02 {
+  height: 190px;
+}
+#falldown_contents03:checked ~ .falldown_contents03 {
+  height: 150px;
+}
+#falldown_contents04:checked ~ .falldown_contents04 {
+  height: 150px;
+}
+#falldown_contents05:checked ~ .falldown_contents05 {
+  height: 190px;
+}
+#falldown_contents06:checked ~ .falldown_contents06 {
+  height: 70px;
+}
+#falldown_contents07:checked ~ .falldown_contents07 {
+  height: 190px;
+}
+#falldown_contents08:checked ~ .falldown_contents08 {
+  height: 230px;
+}
+#falldown_contents09:checked ~ .falldown_contents09 {
+  height: 230px;
+}
+#falldown_contents10:checked ~ .falldown_contents10 {
+  height: 230px;
+}
+#falldown_contents11:checked ~ .falldown_contents11 {
+  height: 70px;
+}
+#falldown_contents12:checked ~ .falldown_contents12 {
+  height: 150px;
+}
+#falldown_contents13:checked ~ .falldown_contents13 {
+  height: 270px;
+}
+/* --------------------------header------------------------------------ */
+/* --------------------------visual------------------------------------ */
+.visual_title {
+  background: url(../img/title01.jpg) no-repeat center center/cover;
+  height: 150px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #040a2b;
+  text-align: center;
+  line-height: 150px;
+  position: relative;
+}
+.path_nav {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+}
+.path_nav li {
+  width: 70px;
+  height: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  text-align: center;
+  line-height: 20px;
+  margin: 0 3px;
+}
+.path_nav li a {
+  font-size: 11px;
+}
+/* --------------------------visual------------------------------------ */
+/* --------------------------filter_box------------------------------------ */
+.filter_box {
+  width: 25%;
+  height: 10px;
+  overflow: hidden;
+  border: 1px solid #040a2b;
+  border-radius: 20px;
+  line-height: 10px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.filter_box .filter_title {
+  display: flex;
+  color: #040a2b;
+  font-size: 13px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.filter_box .filter_name {
+  color: #040a2b;
+  font-weight: bold;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter_items {
+  display: flex;
+  margin-bottom: 20px;
+}
+.filter_items li {
+  flex: 1;
+  text-align: center;
+  color: #999;
+  font-size: 10px;
+}
+#searchfilter {
+  display: none;
+}
+#searchfilter:checked ~ .filter_box {
+  width: auto;
+  height: auto;
+  overflow: auto;
+  border-radius: 10px;
+}
+/* --------------------------filter_box------------------------------------ */
+/* --------------------------product------------------------------------ */
+.container {
+  display: flex;
+  margin-bottom: 20px;
+}
+.container_last {
+  display: flex;
+  margin-bottom: 100px;
+}
+.container:last-child {
+  margin-bottom: 100px;
+}
+.product {
+  flex: 1;
+  border-radius: 10px;
+  margin: 0 10px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+.product:nth-child(2) {
+  margin-left: 0;
+}
+.product .product_img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.product .product_img img {
+  width: 100%;
+  display: block;
+}
+
+.product h3 {
+  display: inline-block;
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 0 5px;
+}
+
+.product p {
+  display: inline-block;
+  height: 30px;
+  font-size: 13px;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+
+.product .shopping {
+  display: flex;
+  margin: 10px 0;
+}
+.product .shopping .btn_shop {
+  flex: 1;
+  font-size: 13px;
+  line-height: 10px;
+  background-color: #040a2b;
+  border-radius: 30px;
+  margin: 0 5px;
+  padding: 10px 5px;
+}
+.product .shopping .btn_shop a {
+  color: #fff;
+}
+.product .shopping .btn_cart {
+  flex: 1;
+  font-size: 13px;
+  line-height: 10px;
+  color: #040a2b;
+  background-color: #fff;
+  border: 1px solid #040a2b;
+  border-radius: 30px;
+  margin: right 5px;
+  padding: 10px 5px;
+}
+/* --------------------------product------------------------------------ */
+
+/* --------------------------footer------------------------------------ */
+.footer {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  z-index: 999;
+}
+.footer .footer_icon {
+  flex: 1;
+}
+
+.footer .footer_icon i {
+  display: block;
+  font-size: 30px;
+  color: #040a2b;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.footer .footer_icon span {
+  display: block;
+  font-size: 13px;
+  color: #040a2b;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --------------------------footer------------------------------------ */
