@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -487,3 +488,494 @@ body::-webkit-scrollbar {
   display: block;
 }
 /* --------------------------instagram------------------------------------ */
+=======
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #040a2b;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+/* --------------------------header------------------------------------ */
+
+.header {
+  display: flex;
+}
+
+.header .gnb {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+.ham_btn {
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.login {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 20px 0;
+  line-height: 20px;
+}
+
+.header .logo {
+  margin: 5px 10px;
+  flex: 1;
+  transition: all 0.5s;
+}
+
+.header .logo img {
+  width: 100%;
+  display: block;
+}
+.header .search {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  margin: 20px 10px;
+}
+.header .search_icon {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  color: #040a2b;
+  font-size: 15px;
+}
+.header .search input[type="search"] {
+  width: 80%;
+  padding: 5px 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #040a2b;
+}
+
+.lnb {
+  display: flex;
+}
+.lnb li {
+  flex: 1;
+  text-align: center;
+  border-bottom: 1px solid #040a2b;
+  margin: 0 10px;
+  margin-bottom: 10px;
+}
+/* lnb */
+.falldown_menu {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  height: 0;
+  width: 80%;
+  transition: all 0.3s 0.2s;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #fff;
+}
+#falldown_menu_on,
+#falldown_menu_off {
+  display: none;
+}
+#falldown_menu_on:checked ~ .falldown_menu {
+  height: 200vh;
+}
+#falldown_menu_off:checked ~ .falldown_menu {
+  height: 0;
+}
+#falldown_menu_on:checked ~ .falldown_menu_close {
+  opacity: 1;
+}
+#falldown_menu_off:checked ~ .falldown_menu_close {
+  opacity: 0;
+}
+.falldown_menu_close {
+  position: fixed;
+  top: 55px;
+  left: 81%;
+  font-size: 30px;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s 0.2s;
+  z-index: 1;
+}
+.falldown_contents {
+  display: flex;
+  border-bottom: 1px dashed #707070;
+  padding: 5px;
+}
+.title {
+  width: 80px;
+  margin: 10px;
+  text-align: center;
+  color: #040a2b;
+  font-weight: bold;
+}
+.title_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.title_img img {
+  width: 100%;
+}
+.falldown_contents ul {
+  flex: 1;
+}
+/* .falldown_contents .skincare_menu,
+.falldown_contents .makeup_menu,
+.falldown_contents .fragrance,
+.falldown_contents .collection,
+.falldown_contents .re_nutriv,
+.falldown_contents .aerin{
+
+} */
+
+.falldown_contents label {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.falldown_contents01,
+.falldown_contents02,
+.falldown_contents03,
+.falldown_contents04,
+.falldown_contents05,
+.falldown_contents06,
+.falldown_contents07,
+.falldown_contents08,
+.falldown_contents09,
+.falldown_contents10,
+.falldown_contents11,
+.falldown_contents12,
+.falldown_contents13 {
+  height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.3s 0.2s;
+}
+
+.falldown_contents01 li,
+.falldown_contents02 li,
+.falldown_contents03 li,
+.falldown_contents04 li,
+.falldown_contents05 li,
+.falldown_contents06 li,
+.falldown_contents07 li,
+.falldown_contents08 li,
+.falldown_contents09 li,
+.falldown_contents10 li,
+.falldown_contents11 li,
+.falldown_contents12 li,
+.falldown_contents13 li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px solid #040a2b;
+  box-sizing: border-box;
+  border-radius: 30px;
+  text-align: center;
+  background-color: #f9f9f9;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.falldown_contents01 li a,
+.falldown_contents02 li a,
+.falldown_contents03 li a,
+.falldown_contents04 li a,
+.falldown_contents05 li a,
+.falldown_contents06 li a,
+.falldown_contents07 li a,
+.falldown_contents08 li a,
+.falldown_contents09 li a,
+.falldown_contents10 li a,
+.falldown_contents11 li a,
+.falldown_contents12 li a,
+.falldown_contents13 li a {
+  display: block;
+  width: 100%;
+}
+
+#falldown_contents01,
+#falldown_contents02,
+#falldown_contents03,
+#falldown_contents04,
+#falldown_contents05,
+#falldown_contents06,
+#falldown_contents07,
+#falldown_contents08,
+#falldown_contents09,
+#falldown_contents10,
+#falldown_contents11,
+#falldown_contents12,
+#falldown_contents13 {
+  display: none;
+}
+#falldown_contents01:checked ~ .falldown_contents01 {
+  height: 270px;
+}
+#falldown_contents02:checked ~ .falldown_contents02 {
+  height: 190px;
+}
+#falldown_contents03:checked ~ .falldown_contents03 {
+  height: 150px;
+}
+#falldown_contents04:checked ~ .falldown_contents04 {
+  height: 150px;
+}
+#falldown_contents05:checked ~ .falldown_contents05 {
+  height: 190px;
+}
+#falldown_contents06:checked ~ .falldown_contents06 {
+  height: 70px;
+}
+#falldown_contents07:checked ~ .falldown_contents07 {
+  height: 190px;
+}
+#falldown_contents08:checked ~ .falldown_contents08 {
+  height: 230px;
+}
+#falldown_contents09:checked ~ .falldown_contents09 {
+  height: 230px;
+}
+#falldown_contents10:checked ~ .falldown_contents10 {
+  height: 230px;
+}
+#falldown_contents11:checked ~ .falldown_contents11 {
+  height: 70px;
+}
+#falldown_contents12:checked ~ .falldown_contents12 {
+  height: 150px;
+}
+#falldown_contents13:checked ~ .falldown_contents13 {
+  height: 270px;
+}
+/* --------------------------header------------------------------------ */
+/* --------------------------main_visual------------------------------------ */
+.main_visual {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.main_visual .slick-dots {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  gap: 10px;
+}
+
+.main_visual .slick-dots li {
+  width: 50px;
+  height: 5px;
+  border-radius: 30px;
+  background: #fff;
+  transition: 0.5s;
+}
+.main_visual .slick-dots li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 30px;
+  background-color: #040a2b;
+  transition: 3s;
+}
+
+.main_visual .slick-dots li.slick-active::after {
+  width: 100%;
+}
+
+.main_visual .slick-dots li.slick-active {
+  background: #999;
+}
+
+.main_visual .slick-dots button {
+  display: none;
+}
+
+.main_visual img {
+  width: 100%;
+  display: block;
+}
+
+/* --------------------------main_visual------------------------------------ */
+/* --------------------------shop_now------------------------------------ */
+.contents_title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #040a2b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.shopping {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.shopping .menu {
+  height: 140px;
+  margin: 10px;
+  flex: 1;
+  text-align: center;
+}
+
+.shopping .menu .menu_img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 10px auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.shopping .menu .menu_img img {
+  width: 100%;
+  display: block;
+}
+.shopping .menu:nth-child(6) .menu_img img {
+  width: 150px;
+}
+/* --------------------------shop_now------------------------------------ */
+/* --------------------------footer------------------------------------ */
+.footer {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
+  position: fixed;
+  bottom: 0;
+  padding: 10px 0;
+  z-index: 999;
+}
+.footer .footer_icon {
+  flex: 1;
+}
+
+.footer .footer_icon i {
+  display: block;
+  font-size: 30px;
+  color: #040a2b;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.footer .footer_icon span {
+  display: block;
+  font-size: 13px;
+  color: #040a2b;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --------------------------footer------------------------------------ */
+/* --------------------------youtube------------------------------------ */
+.youtube_title {
+  font-size: 20px;
+  color: #040a2b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.video_container {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin-bottom: 20px;
+}
+.video_container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* --------------------------youtube------------------------------------ */
+/* --------------------------instagram------------------------------------ */
+
+.hashtag {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hashtag li {
+  flex: 1;
+  height: 10px;
+  margin: 10px;
+  text-align: center;
+  border: 1px solid #040a2b;
+  border-radius: 30px;
+  font-size: 13px;
+  text-align: center;
+  line-height: 10px;
+  padding: 10px;
+}
+
+.insta_img {
+  height: 120px;
+  display: flex;
+  margin-bottom: 100px;
+}
+.insta_img li {
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 5px;
+  flex: 1;
+}
+.insta_img img {
+  width: 100%;
+  display: block;
+}
+.insta_estee,
+.insta_brown,
+.insta_yoona,
+.insta_purecolor,
+.insta_sf9rowoon,
+.insta_doublewear {
+  display: none;
+}
+
+#hashtag01,
+#hashtag02,
+#hashtag03,
+#hashtag04,
+#hashtag05,
+#hashtag06 {
+  display: none;
+}
+.insta_estee .hashtag .hashtag01,
+.insta_brown .hashtag .hashtag02,
+.insta_yoona .hashtag .hashtag03,
+.insta_purecolor .hashtag .hashtag04,
+.insta_sf9rowoon .hashtag .hashtag05,
+.insta_doublewear .hashtag .hashtag06 {
+  background-color: #040a2b;
+  color: #fff;
+}
+#hashtag01:checked ~ .insta_estee,
+#hashtag02:checked ~ .insta_brown,
+#hashtag03:checked ~ .insta_yoona,
+#hashtag04:checked ~ .insta_purecolor,
+#hashtag05:checked ~ .insta_sf9rowoon,
+#hashtag06:checked ~ .insta_doublewear {
+  display: block;
+}
+/* --------------------------instagram------------------------------------ */
+>>>>>>> main
